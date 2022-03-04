@@ -1,0 +1,44 @@
+/*
+ *  Bootstrap
+ *  Tweak default variables from Bootstrap
+ */
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,900&display=swap');
+
+// Font settings
+$font-family-base: 'Montserrat',
+sans-serif;
+$font-size-base: 18;
+$font-weight-base: 300;
+$line-height-base: 1.8;
+
+
+// Making spacer bigger
+$spacer: 2.5rem;
+
+
+//Activate RFS font-sizes
+$enable-responsive-font-sizes: true;
+
+// Headings
+$headings-font-weight: 900;
+
+// Custom spacers
+$spacers: (10: 10px,
+  15: 15px,
+  20: 20px,
+  25: 25px,
+  30: 30px,
+  40: 40px,
+  60: 60px,
+  80: 80px,
+  100: 100px,
+  150: 150px,
+  250: 250px);
+
+
+// Change container
+$container-max-widths: (sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1170px);

@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+    <meta name="author" content="ADIB ZAND"/>
+
+    <!-- SEO -->
+    <meta name="robots" content="index, follow"/>
+    <link rel="icon" href="../static/assets/img/Intopipe-icon.png"/>
+
+    <title>INTOPIPE</title>
+    
+    <script
+            src="https://kit.fontawesome.com/53c82546d4.js"
+            crossorigin="anonymous"
+    ></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    
+
+    <link
+            rel="stylesheet"
+            href="../static/assets/plugins/bootstrap4/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="../static/assets/css/main.css"/>
+
+
+</head>
+
+<body>
+<header class="header">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm">
+
+
+                <a href="tel:+14242530158">
+                    <i class="fas fa-phone-volume" aria-hidden="false"></i> +1 (424) 2530158</a></div>
+            <div class="col-sm "><a href="mailto:info@into-pipe.com">
+                <i class="far fa-envelope-open"></i> info@into-pipe.com</a>
+            </div>
+            <div class="col-sm text-right ">
+
+                <a href="#"> EN </a>
+                <a>|</a>
+                <a href="#"> DE </a>
+
+            </div>
+        </div>
+    </div>
+
+</header>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+        <a class="navbar-brand" href="{% url 'pages:homepage' %}"
+        ><img src="../static/assets/img/Intopipe.png" alt="INTOPIPE LOGO" width="80" height="67.33"
+        /></a>
+        <button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+        >
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link active" href="#"
+                    >Homeland <span class="sr-only">(current)</span></a
+                    >
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="{% url 'posts:post_list' %}">our story</a>
+                </li>
+                <li class="nav-item">
+                    <div class="dropdown navbar-nav" id="navbarLightNavDropdown">
+                        <a class="nav-link dropdown-toggle" href="{% url 'pages:homepage' %}" id="navbardrop"
+                           role="button"
+                           data-toggle="dropdown" aria-expanded="false">
+                            Products
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href={% url 'products:paper-tube-list' %}>
+                                paper tube
+                            </a>
+
+                            <a class="dropdown-item" href={% url 'products:plastic-pipe-list' %}> Plastic Pipe</a>
+                            <a class="dropdown-item" href={% url 'products:metalic-pipe-list' %}>metallic pipe</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'pages:contact' %}">Contact Us</a>
+                </li>
+
+            </ul>
+
+        </div>
+    </div>
+</nav>
+
+<div class="jumbotron banner-in text-center banner-top uppercase flex">
+    <div class="container">
+        <h1 class="display-4 mb-3 glow"><br>Reasonable price, Excellent Quality, and Prompt Delivery
+        </h1>
+        <br>
+        <br>
+        <div style="color: #FFFFFF; font-size: 90%">
+            <h7>
+                "Since the beginning, long-term thinking has been our motto – in both our operations and our customer
+                relationships."
+            </h7>
+        </div>
+    </div>
+</div>
+
+<main class="index">
+    <section class="benefits py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-3 col-lg-3 col-md-6 mt-4">
+                    <div class="flex flex-row">
+                        <img class="mr-3 img-fluid"
+                             src="https://img.icons8.com/cotton/64/000000/gender-neutral-user--v2.png"
+                             alt=""/>
+
+                        <div class="content mt-1">
+                  <span class="c-usp__title"
+                  >customized order</span
+                  >
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-6 mt-4">
+                    <div class="flex flex-row">
+                        <img class="mr-3 img-fluid"
+                             src="https://img.icons8.com/cotton/64/000000/thumb-up.png" alt=""/>
+
+                        <div class="content mt-1">
+                  <span class="c-usp__title"
+                  >Excellent Quality</span
+                  >
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-6 mt-4">
+                    <div class="flex flex-row">
+                        <img class="mr-3 img-fluid" src="https://img.icons8.com/cotton/64/000000/fast-delivery--v2.png"
+                             alt=""/>
+
+                        <div class="content mt-1">
+                  <span class="c-usp__title"
+                  >Prompt Delivery</span
+                  >
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-6 mt-4">
+                    <div class="flex flex-row">
+                        <img
+                                class="mr-3 img-fluid"
+                                src="https://img.icons8.com/cotton/64/000000/get-a-discount--v1.png"
+                                alt=""
+                        />
+                        <div class="content mt-1">
+                  <span class="c-usp__title"
+                  > Reasonable Price</span
+                  >
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        </div>
+    </section>
+    <section class="py-0">
+        <div class="container">
+            <div class="row">
+                <div class="quote">
+                    <blockquote>
+                        <p class="thin text-justify">
+                            "We are working towards a reduced impact on the environment and climate throughout the
+                            entire value chain – from production to transport.
+                            One of our ambitions is a closed cycle and circularity in our production. The raw products
+                            for our cores consist of, among other things,
+                            <strong>FSC</strong> certified, recycled carton fibre and worn out cores become in turn a
+                            new raw product.
+                            At the same time, we save on resources by minimising waste and using environmentally-classed
+                            electricity. Once the cores are ready for delivery,
+                            we plan for joint transportation to avoid unnecessary transports, and use environmentally
+                            friendly vehicles with renewable fuel where possible. "
+                        </p>
+                    </blockquote>
+                    <cite>IntoPipe Team</cite>
+                    <img src="https://img.icons8.com/cotton/80/000000/logistics--v2.png" alt=""/>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-5">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12 pr-sm-4 pl-sm-4">
+                    <div
+                            class="jumbotron banner-1 in-content text-right uppercase flex"
+                    >
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-12"></div>
+                                <div class="col-lg-12">
+                                    <h1 class="display-4 mb-2 c-cta-double__title">
+                                        Please check out our catalogue!
+                                    </h1>
+                                    {% if  home_feature.button_text %}
+                                        <a href="{{ home_feature.get_upload_url }}"
+                                           class="btn btn-success text-center">
+                                            {{ home_feature.button_text }}
+                                        </a>
+                                    {% else %}
+                                        <a href="{{ home_feature.get_upload_url }}"
+                                           class="btn btn-success text-center">
+                                            TOUCH HERE!
+                                        </a>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-9">
+                    <div class="single-quote">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="single-quote-image right">
+                                    <img
+                                            class="img-fluid mx-auto d-block mb-3"
+                                            src="../static/assets/img/black-white/1.jpeg"
+                                            alt="ZAND"
+                                    />
+                                </div>
+                            </div>
+                            <div class="col-md-9">
+                                <p class="thin text-justify">
+                                    "<b>INTOPIPE</b> is one of the international leading manufacturers of paper cores,
+                                    tubes and cylindrical packaging.
+                                    Since 2014, we have provided the manufacturing industry with the sector’s most
+                                    flexible and sustainable solutions for paper cores.
+                                    in line with worldwide practices. From spools for the textile industry to paper
+                                    cores and cardboard tubes.
+                                    With a rich experience on the worldwide market, we have learned the importance of
+                                    being flexible.
+                                    Our production is adapted to meet your requirements, with excellent precision. Our
+                                    sustainability work permeates everything we do.
+                                    From production and delivery to our relationships with each other and our
+                                    customers."
+                                </p>
+                                <p class="thin"><b>Sales Manager</b></p>
+                                <p class="thin">A. Zand</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="single-quote mt-5">
+                        <div class="row">
+                            <div class="col-md-3 d-block d-md-none">
+                                <div class="single-quote-image left">
+                                    <img
+                                            class="img-fluid mx-auto d-block mb-3"
+                                            src="../static/assets/img/black-white/Anna.jpg"
+                                            alt=""
+                                    />
+                                </div>
+                            </div>
+                            <div class="col-md-9">
+                                <p class="thin text-justify">
+                                    <b>"We work together with some of the world’s biggest manufacturing industries in
+                                        the metal, paper, plastic and textile industries.
+                                        Would you like our help with a customised solution? Talk to us! / Make your
+                                        customized sample out!"</b>
+                                </p>
+                                <p class="thin"><b></b></p>
+                                <p class="thin"></p>
+
+                            </div>
+                            <div class="col-md-3 d-none d-md-block">
+                                <div class="single-quote-image left">
+                                    <img
+                                            class="img-fluid mx-auto d-block mb-3"
+                                            src="../static/assets/img/black-white/Li.jpeg "
+                                            alt=""
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="single-quote mt-5">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="single-quote-image right">
+                                    <img
+                                            class="img-fluid mx-auto d-block mb-3"
+                                            src="../static/assets/img/black-white/Cathy.jpeg"
+                                            alt=""
+                                    />
+                                </div>
+                            </div>
+                            <div class="col-md-9">
+                                <p class="thin text-justify">
+
+                                </p>
+                                <p class="thin"><b></b></p>
+                                <p class="thin"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 mt-5 mt-md-0">
+                    <img
+                            class="img-fluid mx-auto d-block"
+                            src="../static/assets/img/black-white/01.jpg"
+                            alt=""
+                    />
+                    <img
+                            class="mt-4 img-fluid mx-auto d-block"
+                            src="../static/assets/img/black-white/02.jpg"
+                            alt=""
+                    />
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 text-md-left text-center py-3">
+                    <a href="https://www.ups.com/track?loc=en_DE&requester=ST/" class="btn btn-dark">UPS TRACKING</a>
+                    <img src="../static/assets/img/UPS.png" alt="UPS"/>
+
+                </div>
+                <div class="col-md-4 text-center py-3">
+                    <a href="https://www.fedex.com/en-de/tracking.html" class="btn btn-dark">FEDEX TRACKING</a>
+                    <img src="../static/assets/img/fed.png" alt="FedEx"/>
+                </div>
+                <div class="col-md-4 text-md-right text-center py-3">
+                    <a href="https://www.dhl.de/en/geschaeftskunden/express/verfolgen.html" class="btn btn-dark">DHL
+                        Tracking</a>
+                    <img src="../static/assets/img/DHL.png" alt="DHL"/>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-5">
+        <div class="container">
+            <div class="row text-center d-block">
+                <h2 class="uppercase bolder px-md-5">About IntoPipe Team</h2>
+                <p class="thin px-md-5">
+                    We produce packaging solutions and cardboard tubes for the consumer market for wholesalers and
+                    private companies.
+                </p>
+                <a href="{% url 'pages:about' %}" class="btn btn-link">Our Story</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5">
+        <div class="container">
+            <div class="row text-center d-block">
+                <form method="POST" class = 'form-horizontal' style="background-color:#F9F9F9;" id="form_order">
+                    {% csrf_token %}
+                    <div class="form-row " >
+                        <div class="col-md-6 mb-3 pt-5" >
+                            Material Type:
+                            <select name="material" id="material" required >
+                                {% for material in materials %}
+                                <option value={{material.title}} selected>{{material.title}}</option>
+                                {% endfor %}
+                                
+                            </select>
+                        </div>
+                        <div class="col-md-6 mb-3 pt-5" >
+                            Your LOGO:
+                            <input type="file" id="logo" name ="logo">
+                        </div>
+                        <div class="col-md-6 mb-3 px-3">
+                            
+                            <input type="number" step="0.01" class="form-control" id="inner_diameter" name ="inner_diameter" placeholder="Inner Diameter:" >
+                        </div>
+                        <div class="col-md-6 mb-3 px-3">
+                            
+                            <input type="number" step="0.01" class="form-control" id="thickness" name ="thickness" placeholder="Thickness:" >
+                        </div>
+                        <div class="col-md-6 mb-3 px-3">
+                            
+                            <input type="number" step="0.01" class="form-control" id="length" name ="length" placeholder="Length:" >
+                        </div>
+                        <div class="col-md-6 mb-3 px-3">
+                            
+                            <input type="number" class="form-control" id="quantity" name ="quantity" placeholder="Quantity:" >
+                        </div>
+                        
+
+                        <div class="col-md-6 mb-3 px-3">
+                            
+                            <input type="text" class="form-control" id="name" name ="name" placeholder="Your Name:" required>
+                        </div>
+                        <div class="col-md-6 mb-3 px-3">
+                            
+                            <input class="form-control" type="email" name="email" placeholder="Your Email:">
+                        </div>
+
+                        <div class="col-md-6 mb-3 px-3">
+                            
+                            <input type="text" class="form-control" id="phone" name ="phone" placeholder="Your Phone Number:" >
+                        </div>
+                        
+                    <div class="text-center col-md-12 mb-3">
+                    <button type="submit" class="col-md-6 mb-3 btn" style="background-color:#C69214;">Get a quote!</button> 
+                    </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="py-3"></div>
+</main>
+<footer>
+    <div class="top py-5 ">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h3 style="font-family:fira; color:#c69214">INTOPIPE</h3>
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'pages:homepage' %}">Home</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'pages:about' %}">OUR STORY</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'products:metalic-pipe-list' %}">Our Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact Us</a>
+                        </li>
+                        </br>
+                        <li class="col-md-6">
+                            <a href="https://www.flandersinvestmentandtrade.com/en" target="_blank">
+                                <img src="../static/assets/img/final.png" alt=""/>
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <div class="col-md-6">
+                    <div class="row">
+                        <!--<div class="col-sm-6">
+                            <a href="https://www.flandersinvestmentandtrade.com/en" target="_blank">
+                                <img src="../static/assets/img/final.png" alt=""/>
+                            </a>
+                        </div>-->
+                        <div class="social-icons col-md-6" style="margin-right: 29%">
+
+                            <ul class="list-unstyled text-center mb-0">
+
+                                <li class="list-unstyled-item" style="height:50px">
+                                    <a href="https://www.linkedin.com/company/kindermanstradingabfa/">
+                                        <i class="fab fa-linkedin-in"></i>
+                                    </a>
+                                </li>
+                                <li class="list-unstyled-item" style="height:48px;margin-right: 10%">
+                                    <a href="https://www.youtube.com/channel/UCPzITktBkAP1iYhCcngI_aw">
+                                        <i class="fab fa-youtube"></i>
+                                    </a>
+                                </li>
+                                <li class="list-unstyled-item">
+                                    <a href="https://www.instagram.com/kindermanstradingabfa">
+                                        <i class="fab fa-instagram"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 text-left">
+
+                        <h3>Contact Us</h3>
+                        <ul class="nav flex-column">
+                            <li class="nav-item pb-1">
+                                Leuvensesteenweg 209
+                            </li>
+                            <li class="nav-item pb-1">
+                                2800 Mechelen
+                            </li>
+                            <li class="nav-item pb-1">
+                                Belgium
+                            </li>
+                            <li class="nav-item pb-1">
+                                <a href="tel:+1 (424) 2530158" class="nav-link pl-0 pt-0">+1 (424) 2530158</a>
+                            </li>
+                            <li class="nav-item pb-1">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2509.9205478203785!2d4.493879850359387!3d51.01761665411708!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3e42fa8bb9d4f%3A0x3988e07da32f573e!2sLeuvensesteenweg%20209%2C%202800%20Mechelen%2C%20Belgium!5e0!3m2!1sen!2s!4v1611076087137!5m2!1sen!2s"
+                                        width="120%" height="100%" frameborder="0" style="border-radius:5px"
+                                        allowfullscreen="" aria-hidden="true" tabindex="0">KTA
+                                </iframe>
+                                <a class="nav-link pl-0 pt-0"><b></b></a>
+
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="bottom">
+        <ul class="nav justify-content-center mb-0">
+            <li class="nav-item">
+                <a class="nav-link" href="#">All Rights Reserved 2022 ©</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">INTOPIPE ®</a>
+
+            </li>
+        </ul>
+
+    </div>
+</footer>
+<script type="text/javascript">
+    $(document).ready(function () {
+        let form = document.getElementById("form_order");
+        form.addEventListener("submit", (e) => {
+          alert("Thanks for sharing!");
+    });
+});
+
+</script>
+</body>
+</html>

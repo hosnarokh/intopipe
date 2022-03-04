@@ -1,0 +1,44 @@
+.header {
+  background-color: $dark;
+  width: 100%;
+  color: $white;
+  padding: 5px;
+
+  a {
+    color: $white;
+    i {
+      color: $primary;
+      margin-right: 5px;
+    }
+  }
+}
+
+a:hover {
+  color: $primary;
+  text-decoration: none;
+  transition-duration: 0.4s;
+}
+
+@media (max-width: 996px) {
+  header {
+    a {
+      font-size: 13px;
+    }
+  }
+}
+
+@media (max-width: 568px) {
+  header {
+    a {
+      font-size: 12px;
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  header {
+    a {
+      font-size: 9px;
+    }
+  }
+}

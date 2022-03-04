@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+            name="viewport"
+    />
+    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+    <meta name="author" content="ADIB ZAND"/>
+
+    <!-- SEO -->
+    <meta name="robots" content="index, follow"/>
+    <link rel="icon" href="../static/assets/img/KTA-Lo.png"/>
+
+    <title>INTOPIPE</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <script
+            src="https://kit.fontawesome.com/53c82546d4.js"
+            crossorigin="anonymous"
+    ></script>
+    <link
+            rel="stylesheet"
+            href="../../static/assets/plugins/bootstrap4/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="../../static/assets/css/main.css"/>
+</head>
+
+<body>
+<header class="header">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm">
+
+
+                <a href="tel:+14242530158">
+                    <i class="fas fa-phone-volume" aria-hidden="false"></i> +1 (424) 2530158</a></div>
+            <div class="col-sm "><a href="mailto: info@into-pipe.com">
+                <i class="far fa-envelope-open"></i> info@into-pipe.com</a>
+            </div>
+            <div class="col-sm text-right">
+
+                <a href="#"> EN </a>
+                <a>|</a>
+                <a href="#"> NL </a>
+
+            </div>
+        </div>
+    </div>
+
+</header>
+<nav class="navbar navbar-expand-lg navbar-light bg-light ">
+    <div class="container">
+        <a class="navbar-brand" href="{% url 'pages:homepage' %}"
+        ><img src="../../static/assets/img/Intopipe.png" alt="INTOPIPE LOGO" width="80" height="67.33"
+        /></a>
+        <button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarSupportedContent"
+                controls="navbarNavLightDropdown"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+        >
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="{% url 'pages:homepage' %}"
+                    >Homeland <span class="sr-only">(current)</span></a
+                    >
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="{% url 'pages:about' %}">About Us</a>
+                </li>
+
+                <li class="nav-item">
+                    <div class="dropdown navbar-nav" id="navbarLightNavDropdown">
+                        <a class="nav-link dropdown-toggle" href="{% url 'pages:homepage' %}" id="navbardrop"
+                           role="button"
+                           data-toggle="dropdown" aria-expanded="false">
+                            Products
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href={% url 'products:paper-tube-list' %}>
+                                paper tube
+                            </a>
+
+                            <a class="dropdown-item" href={% url 'products:plastic-pipe-list' %}> Plastic Pipe</a>
+                            <a class="dropdown-item" href={% url 'products:metalic-pipe-list' %}>metallic pipe</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="{% url 'pages:contact' %}">Contact Us</a>
+                </li>
+
+            </ul>
+
+        </div>
+    </div>
+</nav>
+<section class="c-breadcrumb">
+    <div class="container">
+        <div class="row">
+            <ul class="nav breadcrumb">
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'pages:homepage' %}"><i class="fas fa-home"></i></a>
+                </li>
+                <li class="nav-item arrow">
+                    <p><i class="fas fa-angle-right"></i></p>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Paper Tube</a>
+
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+<div
+        class="jumbotron in-page banner-7 banner-top text-center uppercase flex"
+>
+    <div class="container">
+        <h1 class="display-4 mb-0 mb-lg-5 py-5 py-lg-0 ">Paper Tube</h1>
+        <p> ICT Engineering and Business Development Freelancers.
+            <b>KTA</b> is actively looking for companies and/or freelancers to use and to export their services on a
+            worldwide basis.</p>
+    </div>
+</div>
+
+<main class="index">
+    <section class="px-5">
+        <div class="container">
+            <div class="row">
+                {% for service in services %}
+
+                    <div class="col-xl-3 col-lg-3 col-md-6 mt-4">
+                        <div class="flex flex-row">
+
+                            {% if service.service_icon %}
+                                <img
+                                        class="mr-3 img-fluid"
+                                        alt=""
+                                        src="{{ service.service_icon.url }}"
+                                />
+                            {% endif %}
+                            <div class="content mt-1">
+                                <a href="{% url 'products:paper-tube-detail' slug=service.slug %}"
+                                >{{ service.title }}</a
+                                >
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+
+                <div class="col-12 py-5"></div>
+            </div>
+            <div class="row">
+                {% for service in services %}
+
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="row">
+                                <div class="col-md-10">
+                                    <a href="{% url 'products:paper-tube-detail' slug=service.slug %}"
+                                       class="bolder">{{ service.title }}</a>
+                                    <p class="text-justify">
+                                        {{ service.short_content|safe }}
+                                    </p>
+                                </div>
+                                <div class="col-md-2 mb-2 mb-md-0">
+                                    {% if service.service_image_one %}
+                                        <img
+                                                class="img-fluid"
+                                                alt="{{ service.title }}"
+                                                src="{{ service.service_image_one.url }}"
+
+                                        />
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 py-3"></div>
+                {% endfor %}
+                <div class="col-12 py-5"></div>
+            </div>
+            <section>
+                <div class="container">
+                    <div class="row boxed text-center p-3">
+                        <div class="col-12">
+                            <h2 class="dark mb-4 bolder mt-3">
+                                INTERESTED IN OUR SERVICES?
+                            </h2>
+                        </div>
+                        <a href="mailto: info@into-pipe.com" class="btn btn-success mx-auto mb-3">
+                            Contact us
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <div class="col-12 py-5"></div>
+        </div>
+    </section>
+</main>
+<footer>
+    <div class="top py-5 ">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h3 style="color:#64ddda;" style="font-family:fira">KTA</h3>
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'pages:homepage' %}">Home</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'pages:about' %}">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'products:products_list' %}">Our Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'pages:contact' %}">Contact Us</a>
+                        </li>
+                        </br>
+                        </br>
+                        </br>
+
+                        <li class="col-md-6">
+                            <a href="https://www.flandersinvestmentandtrade.com/en" target="_blank">
+                                <img src="../../static/assets/img/final.png" alt=""/>
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <div class="col-md-6">
+                    <div class="row">
+                        <!--<div class="col-sm-6">
+                            <a href="https://www.flandersinvestmentandtrade.com/en" target="_blank">
+                                <img src="../static/assets/img/final.png" alt=""/>
+                            </a>
+                        </div>-->
+                        <div class="social-icons col-md-6">
+
+                            <ul class="list-unstyled text-center mb-0">
+
+                                <li class="list-unstyled-item">
+                                    <a href="https://www.linkedin.com/company/kindermanstradingabfa/">
+                                        <i class="fab fa-linkedin-in"></i>
+                                    </a>
+                                </li>
+                                <li class="list-unstyled-item">
+                                    <a href="https://www.youtube.com/channel/UCPzITktBkAP1iYhCcngI_aw">
+                                        <i class="fab fa-youtube"></i>
+                                    </a>
+                                </li>
+                                <li class="list-unstyled-item">
+                                    <a href="https://www.instagram.com/kindermanstradingabfa">
+                                        <i class="fab fa-instagram"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 text-center">
+
+                        <h3 style="color:#64ddda;" style="font-family:fira">Contact Us</h3>
+                        <ul class="nav flex-column">
+                            <li class="nav-item pb-1">
+                                Leuvensesteenweg 209
+                            </li>
+                            <li class="nav-item pb-1">
+                                2800 Mechelen
+                            </li>
+                            <li class="nav-item pb-1">
+                                Belgium
+                            </li>
+                            <li class="nav-item pb-1">
+                                <a href="tel:+32 473951627" class="nav-link pl-0 pt-0">+32 473951627</a>
+                            </li>
+                            <li class="nav-item pb-1">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2509.9205478203785!2d4.493879850359387!3d51.01761665411708!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3e42fa8bb9d4f%3A0x3988e07da32f573e!2sLeuvensesteenweg%20209%2C%202800%20Mechelen%2C%20Belgium!5e0!3m2!1sen!2s!4v1611076087137!5m2!1sen!2s"
+                                        width="200" height="200" frameborder="0" style="border-radius:5px;"
+                                        allowfullscreen="" aria-hidden="true" tabindex="0">KTA
+                                </iframe>
+                                <a class="nav-link pl-0 pt-0"><b></b></a>
+
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="bottom">
+        <ul class="nav justify-content-center mb-0">
+            <li class="nav-item">
+                <a class="nav-link" href="#">All Rights Reserved 2021 ©</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">KTA ®</a>
+
+            </li>
+        </ul>
+
+    </div>
+</footer>
+
+<script src="../../static/assets/plugins/jquery/jquery-3.5.1.slim.min.js"></script>
+<script src="../../static/assets/plugins/jquery.sticky.js"></script>
+<script src="../../static/assets/plugins/popper/popper.min.js"></script>
+<script src="../../static/assets/plugins/bootstrap4/js/bootstrap.min.js"></script>
+<script src="../../static/assets/js/main.js"></script>
+</body>
+</html>

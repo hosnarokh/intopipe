@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+            name="viewport"
+    />
+    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+    <meta name="author" content="ADIB ZAND"/>
+
+    <!-- SEO -->
+    <meta name="robots" content="index, follow"/>
+    <link rel="icon" href="../static/assets/img/Intopipe-icon.png"/>
+
+    <title>INTOPIPE</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <script
+            src="https://kit.fontawesome.com/53c82546d4.js"
+            crossorigin="anonymous"
+    ></script>
+    <link
+            rel="stylesheet"
+            href="../static/assets/plugins/bootstrap4/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="../static/assets/css/main.css"/>
+</head>
+
+<body>
+<header class="header">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm">
+
+
+                <a href="tel:+14242530158">
+                    <i class="fas fa-phone-volume" aria-hidden="false"></i> +1 (424) 2530158</a></div>
+            <div class="col-sm "><a href="mailto: info@into-pipe.com">
+                <i class="far fa-envelope-open"></i> info@into-pipe.com</a>
+            </div>
+            <div class="col-sm text-right ">
+
+                <a href="#"> EN </a>
+                <a>|</a>
+                <a href="#"> DE </a>
+
+            </div>
+        </div>
+    </div>
+
+</header>
+<nav class="navbar navbar-expand-lg navbar-light bg-light ">
+    <div class="container">
+        <a class="navbar-brand" href="{% url 'pages:homepage' %}"
+        ><img src="../static/assets/img/Intopipe.png" alt="INTOPIPE LOGO" width="80" height="67.33"
+        /></a>
+        <button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarSupportedContent"
+                controls="navbarNavLightDropdown"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+        >
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="{% url 'pages:homepage' %}"
+                    >Homeland <span class="sr-only">(current)</span></a
+                    >
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="{% url 'pages:about' %}">our story</a>
+                </li>
+
+                <li class="nav-item">
+                    <div class="dropdown navbar-nav" id="navbarLightNavDropdown">
+                        <a class="nav-link dropdown-toggle" href="{% url 'pages:homepage' %}" id="navbardrop"
+                           role="button"
+                           data-toggle="dropdown" aria-expanded="false">
+                            Products
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href={% url 'products:paper-tube-list' %}>
+                                paper tube
+                            </a>
+
+                            <a class="dropdown-item" href={% url 'products:plastic-pipe-list' %}> Plastic Pipe</a>
+                            <a class="dropdown-item" href={% url 'products:metalic-pipe-list' %}> Metallic Pipe</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'pages:contact' %}">Contact Us</a>
+                </li>
+
+            </ul>
+
+
+        </div>
+    </div>
+</nav>
+<section class="c-breadcrumb">
+    <div class="container">
+        <div class="row">
+            <ul class="nav breadcrumb">
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fas fa-home"></i></a>
+                </li>
+                <li class="nav-item arrow">
+                    <p><i class="fas fa-angle-right"></i></p>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Our Story</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+<div
+        class="jumbotron in-page banner-3 banner-top text-center uppercase flex"
+>
+    <div class="container ">
+        {% if category.short_description %}
+            <h1 class="display-4 mb-3 pb-3 pt-3 py-lg-0">{{ category.title }}</h1>
+            <p>
+                {{ category.short_description }}
+            </p>
+        {% else %}
+            <h1 class="display-4 mb-3 pb-3 pt-3 py-lg-0">OUR PRODUCTS</h1>
+            <p>
+                From metal and plastic to paper and textiles. Different manufacturing processes set different demands.
+                We adapt strength, paper quality, inner measurements and material thicknesses down to the exact
+                millimetre.
+                But it is not our equipment that dictates the measurements, it is your needs. By customising the core
+                according to your needs, we save on resources and materials.
+                This is sustainable – both economically and environmentally.
+            </p>
+        {% endif %}
+
+    </div>
+</div>
+
+<main class="index">
+    <h2>{{ posts.count }}</h2>
+    <section class="pt-3 pb-5">
+        <div class="container">
+            {% for post in posts %}
+                <div class="row">
+                    <div class="col-lg-3 col-md-4 mb-4 mb-md-0">
+                        <a href="">
+                            <img
+                                    class="img-fluid"
+                                    src="{{ post.post_image.url }}"
+                                    alt=""
+                            />
+                        </a>
+                    </div>
+                    <div class="col-lg-9 col-md-8">
+                        <a href=""><h2 class="bolder">{{ post.title }}</h2></a>
+                        <span class="c-card__subtitle"
+                        >{{ post.short_content|safe|striptags }}</span
+                        >
+                        <p class="thin">
+                            {{ post.description }}
+                        </p>
+                        <a
+                                href="{{ post.get_upload_url }}"
+                                class="btn btn-link"
+                        >{{ post.button_text }}</a
+                        >
+                    </div>
+                </div>
+                <hr class="my-4"/>
+            {% endfor %}
+        </div>
+    </section>
+</main>
+<footer>
+    <div class="top py-5 ">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h3 style="font-family:fira; color:#c69214">INTOPIPE</h3>
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'pages:homepage' %}">Home</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'pages:about' %}">OUR STORY</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'products:metalic-pipe-list' %}">Our Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact Us</a>
+                        </li>
+                        </br>
+                        <li class="col-md-6">
+                            <a href="https://www.flandersinvestmentandtrade.com/en" target="_blank">
+                                <img src="../static/assets/img/final.png" alt=""/>
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <div class="col-md-6">
+                    <div class="row">
+                        <!--<div class="col-sm-6">
+                            <a href="https://www.flandersinvestmentandtrade.com/en" target="_blank">
+                                <img src="../static/assets/img/final.png" alt=""/>
+                            </a>
+                        </div>-->
+                        <div class="social-icons col-md-6" style="margin-right: 29%">
+
+                            <ul class="list-unstyled text-center mb-0">
+
+                                <li class="list-unstyled-item" style="height:50px">
+                                    <a href="https://www.linkedin.com/company/kindermanstradingabfa/">
+                                        <i class="fab fa-linkedin-in"></i>
+                                    </a>
+                                </li>
+                                <li class="list-unstyled-item" style="height:48px;margin-right: 10%">
+                                    <a href="https://www.youtube.com/channel/UCPzITktBkAP1iYhCcngI_aw">
+                                        <i class="fab fa-youtube"></i>
+                                    </a>
+                                </li>
+                                <li class="list-unstyled-item">
+                                    <a href="https://www.instagram.com/kindermanstradingabfa">
+                                        <i class="fab fa-instagram"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 text-left">
+
+                        <h3>Contact Us</h3>
+                        <ul class="nav flex-column">
+                            <li class="nav-item pb-1">
+                                Leuvensesteenweg 209
+                            </li>
+                            <li class="nav-item pb-1">
+                                2800 Mechelen
+                            </li>
+                            <li class="nav-item pb-1">
+                                Belgium
+                            </li>
+                            <li class="nav-item pb-1">
+                                <a href="tel:+1 (424) 2530158" class="nav-link pl-0 pt-0">+1 (424) 2530158</a>
+                            </li>
+                            <li class="nav-item pb-1">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2509.9205478203785!2d4.493879850359387!3d51.01761665411708!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3e42fa8bb9d4f%3A0x3988e07da32f573e!2sLeuvensesteenweg%20209%2C%202800%20Mechelen%2C%20Belgium!5e0!3m2!1sen!2s!4v1611076087137!5m2!1sen!2s"
+                                        width="120%" height="100%" frameborder="0" style="border-radius:5px"
+                                        allowfullscreen="" aria-hidden="true" tabindex="0">KTA
+                                </iframe>
+                                <a class="nav-link pl-0 pt-0"><b></b></a>
+
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="bottom">
+        <ul class="nav justify-content-center mb-0">
+            <li class="nav-item">
+                <a class="nav-link" href="#">All Rights Reserved 2022 ©</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">INTOPIPE ®</a>
+
+            </li>
+        </ul>
+
+    </div>
+</footer>
+
+<script src="../static/assets/plugins/jquery/jquery-3.5.1.slim.min.js"></script>
+<script src="../static/assets/plugins/jquery.sticky.js"></script>
+<script src="../static/assets/plugins/popper/popper.min.js"></script>
+<script src="../static/assets/plugins/bootstrap4/js/bootstrap.min.js"></script>
+<script src="../static/assets/js/main.js"></script>
+</body>
+</html>

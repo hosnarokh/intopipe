@@ -1,0 +1,12 @@
+@mixin font-styling($font-size, $line-height: null, $font-weight: null, $letter-spacing: null) {
+    @include rfs($font-size);
+    @if ($line-height) {
+      line-height: ($line-height / $font-size) * 1em;
+    }
+    @if ($font-weight) {
+      font-weight: $font-weight;
+    }
+    @if ($letter-spacing) {
+      letter-spacing: $letter-spacing+pt;
+    }
+  }

@@ -1,0 +1,42 @@
+.btn-success {
+  background-color: $primary;
+  border-color: $primary;
+  padding: 1em 1.75em;
+  border-radius: 0;
+  color: $white !important;
+}
+
+.btn-success:hover {
+  background-color: $primary-light;
+  border-color: $primary-light;
+}
+
+.btn-dark {
+  text-transform: uppercase;
+  color: $white;
+  padding: 20px 28px;
+  border-radius: 0;
+  font-size: 15px;
+  line-height: 1.26667em;
+  font-weight: 700;
+  background-color: $gray-700;
+  border-color: $gray-700;
+  &:hover {
+    background-color: $gray-900;
+  }
+}
+
+.btn-link {
+  padding: 0 0 0.25em;
+  color: $secondary;
+  border-bottom: 1px solid $secondary;
+  text-transform: none;
+  font-size: 1.125rem;
+  line-height: 1.61111em;
+  font-weight: 500;
+  &:hover {
+    text-decoration: none;
+    color: $primary;
+    border-bottom: 1px solid $primary;
+  }
+}
