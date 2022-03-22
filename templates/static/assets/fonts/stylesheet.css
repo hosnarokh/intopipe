@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'Univia Pro';
+    src: url('UniviaPro-Bold.eot');
+    src: url('UniviaPro-Bold.eot?#iefix') format('embedded-opentype'),
+        url('UniviaPro-Bold.woff2') format('woff2'),
+        url('UniviaPro-Bold.woff') format('woff'),
+        url('UniviaPro-Bold.ttf') format('truetype'),
+        url('UniviaPro-Bold.svg#UniviaPro-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
