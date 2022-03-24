@@ -335,16 +335,16 @@
                 <form method="POST" class = 'form-horizontal d-md-none col-md-0' style="background-color:#F9F9F9;" id="form_order">
                     {% csrf_token %}
                     <div class="form-row " >
-                        <div class="col-md-6 mb-3 pt-5" >
+                        <div class="col-md-6 mb-3 pt-5 pl-4 pl-md-0" >
                             Material Type:
-                            <select name="material" id="material" required >
+                            <select  style="width:80px" name="material" id="material" required >
                                 {% for material in materials %}
                                 <option value={{material.title}} selected>{{material.title}}</option>
                                 {% endfor %}
                                 
                             </select>
                         </div>
-                        <div class="col-md-6 mb-3 pt-5" >
+                        <div class="col-md-6 mb-3 pt-5 pl-4 pl-md-0" >
                             Your LOGO:
                             <input type="file" id="logo" name ="logo">
                         </div>
@@ -443,7 +443,7 @@
                     <div class="form-row " >
                         <div class="col-md-6 mb-3 pt-5" >
                             Material Type:
-                            <select name="material" id="material" required >
+                            <select style="width:80px" name="material" id="material" required >
                                 {% for material in materials %}
                                 <option value={{material.title}} selected>{{material.title}}</option>
                                 {% endfor %}
@@ -531,7 +531,7 @@
                 
 
                 <div class="col-12 col-md-5">
-                    <div class="col-sm-6 text-center mx-auto ml-md-0">
+                    <div class="col-sm-6 text-center mx-auto">
                         <h3 class="text-info">Contact Us</h3>
                         <ul class="nav flex-column">
                             <li class="nav-item pb-1">
