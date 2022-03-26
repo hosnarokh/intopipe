@@ -219,9 +219,9 @@
                             <div class="row">
                                 <div class="col-lg-12"></div>
                                 <div class="col-lg-12">
-                                    <h1 class="display-4 mb-2 c-cta-double__title" style="color: aqua;">
+                                    <h2 class="display-4 mb-2 c-cta-double__title" style="color: #a5cd38;">
                                         Please check out our catalogue!
-                                    </h1>
+                                    </h2>
                                     {% if  home_feature.button_text %}
                                         <a href="{{ home_feature.get_upload_url }}"
                                            class="btn btn-success text-center">
@@ -229,7 +229,7 @@
                                         </a>
                                     {% else %}
                                         <a href="{{ home_feature.get_upload_url }}"
-                                           class="btn btn-dark border border-info rounded text-center" style="font-weight: 500;">
+                                           class="btn btn-success rounded text-center" style="font-weight: 500;">
                                             TOUCH HERE!
                                         </a>
                                     {% endif %}
@@ -244,7 +244,7 @@
     <section class="py-5">
         <div class="container">
             <div class="row">
-                <div class="col-lg-9">
+                <div class="col-lg-9 order-1">
                     <div class="single-quote">
                         <div class="row">
                             <div class="col-md-3">
@@ -276,7 +276,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="single-quote mt-5">
+                    <!-- <div class="single-quote mt-5">
                         <div class="row">
                             <div class="col-md-3 d-block d-md-none">
                                 <div class="single-quote-image left">
@@ -308,8 +308,8 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="single-quote mt-5">
+                    </div> -->
+                    <!-- <div class="single-quote mt-5">
                         <div class="row">
                             <div class="col-md-3">
                                 <div class="single-quote-image right">
@@ -328,65 +328,10 @@
                                 <p class="thin"></p>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
 
-
-                <form method="POST" class = 'form-horizontal d-md-none col-md-0' style="background-color:#F9F9F9;" id="form_order">
-                    {% csrf_token %}
-                    <div class="form-row " >
-                        <div class="col-md-6 mb-3 pt-5 pl-4 pl-md-0" >
-                            Material Type:
-                            <select  style="width:80px" name="material" id="material" required >
-                                {% for material in materials %}
-                                <option value={{material.title}} selected>{{material.title}}</option>
-                                {% endfor %}
-                                
-                            </select>
-                        </div>
-                        <div class="col-md-6 mb-3 pt-5 pl-4 pl-md-0" >
-                            Your LOGO:
-                            <input type="file" id="logo" name ="logo">
-                        </div>
-                        <div class="col-md-6 mb-3 px-3">
-                            
-                            <input type="number" step="0.01" class="form-control" id="inner_diameter" name ="inner_diameter" placeholder="Inner Diameter:" >
-                        </div>
-                        <div class="col-md-6 mb-3 px-3">
-                            
-                            <input type="number" step="0.01" class="form-control" id="thickness" name ="thickness" placeholder="Thickness:" >
-                        </div>
-                        <div class="col-md-6 mb-3 px-3">
-                            
-                            <input type="number" step="0.01" class="form-control" id="length" name ="length" placeholder="Length:" >
-                        </div>
-                        <div class="col-md-6 mb-3 px-3">
-                            
-                            <input type="number" class="form-control" id="quantity" name ="quantity" placeholder="Quantity:" >
-                        </div>
-                        
-
-                        <div class="col-md-6 mb-3 px-3">
-                            
-                            <input type="text" class="form-control" id="name" name ="name" placeholder="Your Name:" required>
-                        </div>
-                        <div class="col-md-6 mb-3 px-3">
-                            
-                            <input class="form-control" type="email" name="email" placeholder="Your Email:">
-                        </div>
-
-                        <div class="col-md-6 mb-3 px-3">
-                            
-                            <input type="text" class="form-control" id="phone" name ="phone" placeholder="Your Phone Number:" >
-                        </div> 
-                    </div>
-                    <div class="text-center mb-3 px-3">
-                        <button type="submit" class="col-md-3 mb-3 btn btn-dark rounded" style="text-transform: none; font-weight: 500;">Get a quote!</button> 
-                    </div>
-                </form> 
-
-                
-                <div class="col-lg-3 mt-5 mt-md-0 d-md-inline-block">
+                <div class="col-lg-3 mt-5 mt-md-0 order-3 order-md-2">
                     <img
                             class="img-fluid mx-auto d-block"
                             src="../static/assets/img/black-white/01.jpg"
@@ -398,6 +343,64 @@
                             alt=""
                     />
                 </div>
+
+                <div class=" order-2 order-md-3">
+                    <form method="POST" class = "form-horizontal" style="background-color:#F9F9F9;" id="form_order">
+                        {% csrf_token %}
+                        <div class="form-row" style="margin: 0 !important;" >
+                        
+                            <div class="col-md-6 mb-3 pt-5" style="box-sizing: border-box" >
+                                Material Type:
+                                <select style="width:80px" name="material" id="material" required >
+                                    {% for material in materials %}
+                                    <option value={{material.title}} selected>{{material.title}}</option>
+                                    {% endfor %}
+                                    
+                                </select>
+                            </div>
+                            <div class="col-md-6 mb-3 pt-md-5 pt-3" style="box-sizing: border-box">
+                                Your LOGO:
+                                <input type="file" id="logo" name ="logo">
+                            </div>
+                             
+                            <div class="col-md-6 mb-3 px-3 rounded-full">
+                                
+                                <input type="number" step="0.01" class="form-control" id="inner_diameter" name ="inner_diameter" placeholder="Inner Diameter:" >
+                            </div>
+                            <div class="col-md-6 mb-3 px-3">
+                                
+                                <input type="number" step="0.01" class="form-control" id="thickness" name ="thickness" placeholder="Thickness:" >
+                            </div>
+                            <div class="col-md-6 mb-3 px-3">
+                                
+                                <input type="number" step="0.01" class="form-control" id="length" name ="length" placeholder="Length:" >
+                            </div>
+                            <div class="col-md-6 mb-3 px-3">
+                                
+                                <input type="number" class="form-control" id="quantity" name ="quantity" placeholder="Quantity:" >
+                            </div>
+                            
+    
+                            <div class="col-md-6 mb-3 px-3">
+                                
+                                <input type="text" class="form-control" id="name" name ="name" placeholder="Your Name:" required>
+                            </div>
+                            <div class="col-md-6 mb-3 px-3">
+                                
+                                <input class="form-control" type="email" name="email" placeholder="Your Email:">
+                            </div>
+    
+                            <div class="col-md-6 mb-3 px-3">
+                                
+                                <input type="text" class="form-control" id="phone" name ="phone" placeholder="Your Phone Number:" >
+                            </div> 
+                        </div>
+                        <div class="text-center mb-3 px-3">
+                            <button type="submit" class="col-md-3 mb-3 btn btn-dark rounded" style="text-transform: none; font-weight: 500;">Get a quote!</button> 
+                        </div>
+                    </form>    
+                </div>
+
             </div>
         </div>
     </section>
@@ -425,17 +428,17 @@
     <section class="py-5">
         <div class="container">
             <div class="row text-center d-block">
-                <h2 class="uppercase bolder px-md-5">About IntoPipe Team</h2>
+                <h2 class="uppercase bolder px-md-5" style="color: #c69214;">About IntoPipe Team</h2>
                 <p class="thin px-md-5">
                     We produce packaging solutions and cardboard tubes for the consumer market for wholesalers and
                     private companies.
                 </p>
-                <a href="{% url 'pages:about' %}" class="btn btn-link">Our Story</a>
+                <a href="{% url 'pages:about' %}" class="btn btn-link ">Our Story</a>
             </div>
         </div>
     </section>
 
-    <section class="py-md-5 pb-0 d-none d-md-block">
+    <!-- <section class="py-md-5 pb-0 d-none d-md-block">
         <div class="container">
             <div class="row text-center d-block">
                 <form method="POST" class = 'form-horizontal' style="background-color:#F9F9F9;" id="form_order">
@@ -492,7 +495,7 @@
                 </form>    
             </div>
         </div>
-    </section>
+    </section> -->
 
 
     <div class="py-3"></div>
@@ -504,24 +507,24 @@
 
                 <div class="col-12 col-md-6 text-center text-md-left">
                     <h3 class="text-info">INTOPIPE</h3>
-                    <ul class="nav flex-column">
-                        <li class="nav-item">
-                            <a class="nav-link" href="{% url 'pages:homepage' %}">Home</a>
+                    <ul class="nav flex-column align-items-center align-items-md-start">
+                        <li class="nav-item col-4 pl-md-0">
+                            <a class="nav-link" href="{% url 'pages:homepage' %}">Homeland</a>
                         </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link" href="{% url 'pages:about' %}">OUR STORY</a>
+                        <li class="nav-item col-4 pl-md-0">
+                            <a class="nav-link" href="{% url 'pages:about' %}">Our Story</a>
                         </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link" href="{% url 'products:metalic-pipe-list' %}">Our Services</a>
+                        <li class="nav-item col-4 pl-md-0">
+                            <a class="nav-link" href="{% url 'products:metalic-pipe-list' %}">Products</a>
                         </li>
 
-                        <li class="nav-item">
+                        <li class="nav-item col-4 pl-md-0">
                             <a class="nav-link" href="#">Contact Us</a>
                         </li>
 
-                        <li class="col-md-6 mt-3 mt-md-0">
+                        <li class="col-md-6 mt-3 mt-md-0 pl-md-0">
                             <a href="https://www.flandersinvestmentandtrade.com/en" target="_blank">
                                 <img src="../static/assets/img/fsc-1.png" alt=""/>
                             </a>
@@ -535,13 +538,13 @@
                         <h3 class="text-info">Contact Us</h3>
                         <ul class="nav flex-column">
                             <li class="nav-item pb-1">
-                                Leuvensesteenweg 209
+                                Luisenstraße 1a
                             </li>
                             <li class="nav-item pb-1">
-                                2800 Mechelen
+                                Baden-Baden
                             </li>
                             <li class="nav-item pb-1">
-                                Belgium
+                                Germany
                             </li>
                             <li class="nav-item pb-1">
                                 <a href="tel:+1 (424) 2530158" class="nav-link pl-0 pt-0">+1 (424) 2530158</a>
@@ -628,3 +631,4 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 </html>
+1

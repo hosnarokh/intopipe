@@ -25,7 +25,8 @@
 }
 
 body {
-  font-family: 'Univia-Pro', Montserrat, sans-serif; }
+  font-family: 'Univia-Pro', Montserrat, sans-serif;
+ }
 
 a {
   transition-duration: 0.4s; }
@@ -53,7 +54,7 @@ h1 {
   line-height: 1.1em; }
 
 h2 {
-  color: #a5cd38;
+  color: #c69214;
   font-size: 1.5rem;
   line-height: 1.25em; }
   h2.dark {
@@ -430,8 +431,8 @@ nav {
 
 .btn-link {
   padding: 0 0 0.25em;
-  color: #72BFC5;
-  border-bottom: 1px solid #72BFC5;
+  color: #006068;
+  border-bottom: 1px solid #006068;
   text-transform: none;
   font-size: 1.125rem;
   line-height: 1.61111em;
@@ -481,13 +482,14 @@ nav {
   background-image: url("../img/banners/banner-index.jpg"); }
 
 .banner-1 {
-  background-image: url("../img/banners/IMG_0023.JPG"); }
+  background-image: url("../img/banners/IMG_0023.JPG");
+  background-size: cover; }
 
 .banner-2 {
   background-image: url("../img/banners/banner-2.jpg"); }
 
 .banner-3 {
-  background-image: url("../img/banners/bb.jpg"); }
+  background-image: url("../img/banners/papertube.jpg"); }
 
 .banner-4 {
   background-image: url("../img/banners/banner-4.jpg"); }
@@ -495,25 +497,54 @@ nav {
 .banner-6 {
   background-image: url("../img/banners/banner-6.jpg"); }
 
+.banner-7 {
+   background-image: url("../img/banners/metal.jpg"); }
+
+  .jumbotron.banner-top {
+    background-position: center center;
+    background-repeat:no-repeat;
+    background-size: cover;
+  }
+
 @media (max-width: 1200px) {
   .jumbotron {
-    height: 530px; } }
+    height: 530px; }
+    .jumbotron.banner-top {
+      height: 53vh !important;
+    } }
 
 @media (min-width: 1200px) {
   .jumbotron {
-    height: 600px; } }
+    height: 600px; }
+    .jumbotron.banner-top {
+      height: 53vh !important;
+    }
+  }
 
 @media (max-width: 992px) {
   .jumbotron.banner-top {
-    background-position: center center;
-    height: auto !important; } }
+    height: 35vh !important;
+  } }
 
 @media (max-width: 768px) {
   .jumbotron {
     height: 450px;
-    padding: 20px; } }
+    padding: 20px; }
+  .jumbotron.banner-top {
+      height: 50vh !important;
+  }
+  }
 
 @media (max-width: 576px) {
   .quote {
-    padding: 2em 2em 8em 2em; } }
+    padding: 2em 2em 8em 2em; }
+    .jumbotron.banner-top {
+      height: 50vh !important;
+    } }
 
+    @media (max-height: 400px) {
+      .quote {
+        padding: 2em 2em 8em 2em; }
+        .jumbotron.banner-top {
+          height: 70vh !important;
+        } }
