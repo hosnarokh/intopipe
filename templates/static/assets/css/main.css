@@ -489,7 +489,7 @@ nav {
   background-image: url("../img/banners/banner-2.jpg"); }
 
 .banner-3 {
-  background-image: url("../img/banners/papertube.jpg"); }
+  background-image: url("../img/banners/papertube.jpg");}
 
 .banner-4 {
   background-image: url("../img/banners/banner-4.jpg"); }
@@ -540,21 +540,27 @@ nav {
     padding: 2em 2em 8em 2em; }
     .jumbotron.banner-top {
       height: 50vh !important;
-    } }
+      overflow: hidden;
+    }
+    .jumbotron.breakPoin70{
+      height: 70vh !important;
+      background-position: center center;
+      background-repeat:no-repeat;
+      background-size: cover;
+      } 
+}
 
     @media (max-height: 400px) {
-      .quote {
-        padding: 2em 2em 8em 2em; }
-        .jumbotron.banner-top {
-          height: 70vh !important;
-        } }
+    .quote {
+      padding: 2em 2em 8em 2em; }
+      .jumbotron.banner-top {
+        height: 70vh !important;
+    } }
 
-        .inputstl { 
-          padding: 9px; 
-          border: solid 1px #4B718B; 
-          outline: 0; 
-          background: -webkit-gradient(linear, left top, left 10, from(#FFFFFF), color-stop(4%, #70AB9A), to(#FFFFFF)); 
-          background: -moz-linear-gradient(top, #FFFFFF, #CDDBE4 1px, #FFFFFF 25px); 
-     
-      
-          } 
+  .inputstl { 
+    padding: 9px; 
+    border: solid 1px #4B718B; 
+    outline: 0; 
+    background: -webkit-gradient(linear, left top, left 10, from(#FFFFFF), color-stop(4%, #70AB9A), to(#FFFFFF)); 
+    background: -moz-linear-gradient(top, #FFFFFF, #CDDBE4 1px, #FFFFFF 25px); 
+    } 
