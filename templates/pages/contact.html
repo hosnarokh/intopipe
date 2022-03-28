@@ -76,7 +76,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#"
+                        <a class="nav-link" href="{% url 'pages:homepage' %}"
                         >Homeland <span class="sr-only">(current)</span></a
                         >
                     </li>
@@ -92,7 +92,7 @@
                             </a>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                 <a class="dropdown-item" style="text-transform: none" href={% url 'products:paper-tube-list' %}>
-                                    Paper Core
+                                    Paper Tube
                                 </a>
     
                                 <a class="dropdown-item" style="text-transform: none" href={% url 'products:plastic-pipe-list' %}> Plastic Pipe</a>
@@ -120,7 +120,7 @@
                     <p><i class="fas fa-angle-right"></i></p>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" href="#">Contact Us</a>
+                    <a class="nav-link active" href="{% url 'pages:contact' %}">Contact Us</a>
                 </li>
             </ul>
         </div>
@@ -197,7 +197,7 @@
                         {% endfor %}
 
                         <button onclick="message_sent()"
-                                class="btn btn-success bold uppercase text-center d-block w-100 my-5"
+                                class="btn btn-success bold uppercase text-center d-block w-100 my-5 rounded"
                         >
                             Submit
                         </button>
@@ -287,7 +287,7 @@
                             <a class="nav-link" href="#">Contact Us</a>
                         </li>
 
-                        <li class="col-md-6 mt-3 mt-md-0 pl-md-0">
+                        <li class="col-md-10 col-lg-6 mt-3 mt-md-0 pl-md-0">
                             <a href="https://www.flandersinvestmentandtrade.com/en" target="_blank">
                                 <img src="../static/assets/img/fsc-1.png" alt=""/>
                             </a>
@@ -297,7 +297,7 @@
                 
 
                 <div class="col-12 col-md-5">
-                    <div class="col-sm-6 text-center mx-auto">
+                    <div class="col-sm-6 col-md-8 col-lg-6  text-center mx-auto">
                         <h3 class="text-info">Contact Us</h3>
                         <ul class="nav flex-column">
                             <li class="nav-item pb-1">

@@ -524,7 +524,10 @@ nav {
 @media (max-width: 992px) {
   .jumbotron.banner-top {
     height: 35vh !important;
-  } }
+  }
+  .jumbotron.breakPoin70{
+    height: 50vh !important;
+    }  }
 
 @media (max-width: 768px) {
   .jumbotron {
@@ -533,6 +536,9 @@ nav {
   .jumbotron.banner-top {
       height: 50vh !important;
   }
+  .jumbotron.breakPoin70{
+    height: 60vh !important;
+    } 
   }
 
 @media (max-width: 576px) {
@@ -543,7 +549,7 @@ nav {
       overflow: hidden;
     }
     .jumbotron.breakPoin70{
-      height: 70vh !important;
+      height: 100vh !important;
       background-position: center center;
       background-repeat:no-repeat;
       background-size: cover;

@@ -88,12 +88,12 @@
                                 Products
                             </a>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <a class="dropdown-item active" href={% url 'products:paper-tube-list' %}>
-                                    paper tube
+                                <a class="dropdown-item active" style="text-transform: none" href={% url 'products:paper-tube-list' %}>
+                                    Paper Tube
                                 </a>
     
-                                <a class="dropdown-item" href={% url 'products:plastic-pipe-list' %}> Plastic Pipe</a>
-                                <a class="dropdown-item" href={% url 'products:metalic-pipe-list' %}> Metallic Pipe</a>
+                                <a class="dropdown-item" style="text-transform: none" href={% url 'products:plastic-pipe-list' %}> Plastic Pipe</a>
+                                <a class="dropdown-item" style="text-transform: none" href={% url 'products:metalic-pipe-list' %}> Metallic Pipe</a>
                             </div>
                         </div>
                     </li>
@@ -118,7 +118,7 @@
                     <p><i class="fas fa-angle-right"></i></p>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" href="{% url 'pages:about' %}">Our Story</a>
+                    <a class="nav-link active" href="{% url 'pages:about' %}">Paper Tube</a>
                 </li>
             </ul>
         </div>
@@ -207,7 +207,7 @@
     </section>
     <div class="py-3"></div>
     <section class="text-center  mx-4 mx-md-0">
-        <button type="submit" class="col-md-3 mb-3 btn btn-dark rounded" style="text-transform: none; font-weight: 500;">Learn more about our Products!</button> 
+        <button type="submit" class="col-lg-4 col-md-6 mb-3 btn btn-success rounded" style="text-transform: none; font-weight: 500;">Learn more about our Products!</button> 
     </section>
     <div class="py-5"></div>
 </main>
@@ -232,10 +232,10 @@
                         </li>
 
                         <li class="nav-item col-4 pl-md-0">
-                            <a class="nav-link" href="#">Contact Us</a>
+                            <a class="nav-link" href="{% url 'pages:contact' %}">Contact Us</a>
                         </li>
 
-                        <li class="col-md-6 mt-3 mt-md-0 pl-md-0">
+                        <li class="col-md-10 col-lg-6 mt-3 mt-md-0 pl-md-0">
                             <a href="https://www.flandersinvestmentandtrade.com/en" target="_blank">
                                 <img src="../../static/assets/img/fsc-1.png" alt=""/>
                             </a>
@@ -245,7 +245,7 @@
                 
 
                 <div class="col-12 col-md-5">
-                    <div class="col-sm-6 text-center mx-auto">
+                    <div class="col-sm-6 col-md-8 col-lg-6  text-center mx-auto">
                         <h3 class="text-info">Contact Us</h3>
                         <ul class="nav flex-column">
                             <li class="nav-item pb-1">
