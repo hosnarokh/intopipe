@@ -413,8 +413,8 @@ nav {
   color: #fff !important; }
 
 .btn-success:hover {
-  background-color: #96bc2f;
-  border-color: #96bc2f; }
+  background-color: #034638;
+  border-color: #006068; }
 
 .btn-dark {
   text-transform: uppercase;
@@ -499,6 +499,8 @@ nav {
 
 .banner-7 {
    background-image: url("../img/banners/metal.jpg"); }
+.banner-8 {
+background-image: url("../img/banners/plasticePipe.jpg");}
 
   .jumbotron.banner-top {
     background-position: center center;
