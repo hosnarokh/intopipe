@@ -163,7 +163,8 @@
                         {#                            <br>#}
 
                         <div id="carouselControls{{ forloop.counter }}" class="carousel slide d-flex bg-light rounded" style="height: 40vh;" data-ride="carousel"  data-interval="10000">
-                                <div class="carousel-inner d-flex align-items-center">
+                            <div class="carousel-inner d-flex align-items-center">
+
                                     <div class="carousel-item active">
                                         <img class="img-fluid" alt="{{ product.title }}"
                                                 src="{{ product.images.first.image.url }}"/>
@@ -185,10 +186,8 @@
                                 <a class="carousel-control-next" href="#carouselControls{{ forloop.counter }}" role="button" data-slide="next">
                                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                 <span class="sr-only">Next</span>
-                                </a>
-
-                                
-                         </div>
+                                </a> 
+                               </div>
 
 
                                <div class="mb-auto">
@@ -200,7 +199,7 @@
 
                                     </p>
                                </div>
-                                <a href="mailto: info@into-pipe.com" class="btn btn-link align-self-start"> Get a quote!</a>
+                            <a href="mailto: info@into-pipe.com" class="btn btn-link align-self-start"> Get a quote!</a>
                             
                     </div>
 
