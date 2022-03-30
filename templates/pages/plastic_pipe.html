@@ -153,7 +153,7 @@
             </div>
         </div>
     </section>
-    <section class="py-5">
+    <section class="py-md-5">
         <div class="container">
             <div class="row d-flex justify-items-between">
                 {% for product in products %}
@@ -168,7 +168,7 @@
                         {#                            </div>#}
                         {#                            <br>#}
 
-                        <div id="carouselControls" class="carousel slide d-flex bg-light rounded" data-ride="carousel" data-interval="10000">
+                        <div id="carouselControls{{ forloop.counter }}" class="carousel slide d-flex bg-light rounded" style="height: 40vh;" data-ride="carousel"  data-interval="10000">
                             <div class="carousel-inner d-flex align-items-center">
                                 
                               <div class="carousel-item active">
@@ -184,24 +184,26 @@
                               {% endfor %}
                               
                             </div>
-                            <a class="carousel-control-prev" href="#carouselControls" role="button" data-slide="prev">
+                            <a class="carousel-control-prev" href="#carouselControls{{ forloop.counter }}" role="button" data-slide="prev">
                               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                               <span class="sr-only">Previous</span>
                             </a>
-                            <a class="carousel-control-next" href="#carouselControls" role="button" data-slide="next">
+                            <a class="carousel-control-next" href="#carouselControls{{ forloop.counter }}" role="button" data-slide="next">
                               <span class="carousel-control-next-icon" aria-hidden="true"></span>
                               <span class="sr-only">Next</span>
                             </a>
                           </div>
 
-                        <a href="{% url 'products:plastic-pipe-detail' slug=product.slug %}"><h2
-                                class="bolder text-center">{{ product.title }}</h2></a>
-                        <p class="thin text-justify">
+                          <div class="mb-auto"></div>
+                            <a href="{% url 'products:plastic-pipe-detail' slug=product.slug %}"><h2
+                                class="mt-4 bolder text-center">{{ product.title }}</h2></a>
+                            <p class="thin text-justify">
 
-                            {{ product.short_content|safe|striptags|truncatewords:56 }}
+                                {{ product.short_content|safe|striptags|truncatewords:56 }}
 
-                        </p>
-                        <a href="mailto: info@into-pipe.com" class="btn btn-link"> Get a quote!</a>
+                            </p>
+                          </div>
+                        <a href="mailto: info@into-pipe.com" class="btn btn-link align-self-start"> Get a quote!</a>
                     </div>
 
                 {% endfor %}

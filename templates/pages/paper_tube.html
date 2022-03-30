@@ -162,7 +162,7 @@
                         {#                            </div>#}
                         {#                            <br>#}
 
-                        <div id="carouselControls" class="carousel slide d-flex bg-light rounded" style="height: 40vh;" data-ride="carousel"  data-interval="10000">
+                        <div id="carouselControls{{ forloop.counter }}" class="carousel slide d-flex bg-light rounded" style="height: 40vh;" data-ride="carousel"  data-interval="10000">
                                 <div class="carousel-inner d-flex align-items-center">
                                     <div class="carousel-item active">
                                         <img class="img-fluid" alt="{{ product.title }}"
@@ -178,17 +178,20 @@
                                     {% endfor %}
                                 </div>
 
-                                <a class="carousel-control-prev" href="#carouselControls" role="button" data-slide="prev">
+                                <a class="carousel-control-prev" href="#carouselControls{{ forloop.counter }}" role="button" data-slide="prev">
                                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                 <span class="sr-only">Previous</span>
                                 </a>
-                                <a class="carousel-control-next" href="#carouselControls" role="button" data-slide="next">
+                                <a class="carousel-control-next" href="#carouselControls{{ forloop.counter }}" role="button" data-slide="next">
                                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                 <span class="sr-only">Next</span>
                                 </a>
+
+                                
                          </div>
 
-                                <div class="mb-auto">
+
+                               <div class="mb-auto">
                                     <a href="{% url 'products:paper-tube-detail' slug=product.slug %}"><h2
                                             class="mt-4 bolder text-center">{{ product.title }}</h2></a>
                                     <p class="thin text-justify">
@@ -333,6 +336,7 @@
 <script src="../../static/assets/plugins/popper/popper.min.js"></script>
 <script src="../../static/assets/plugins/bootstrap4/js/bootstrap.min.js"></script>
 <script src="../../static/assets/js/main.js"></script>
+
 
 <script>
     var slideIndex = 0;
