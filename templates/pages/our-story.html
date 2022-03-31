@@ -36,12 +36,12 @@
                     <a href="tel:+14242530158">
                         <i class="fas fa-phone-volume" aria-hidden="false"></i> +1 (424) 2530158</a>
                 </li>
-    
+
                 <li class="col-8 col-md-4">
                     <a href="mailto:info@into-pipe.com">
                         <i class="far fa-envelope-open"></i> info@into-pipe.com</a>
                 </li>
-    
+
                 <li class="ml-auto col-3 col-md-4 text-right">
                     <a href="#"> EN </a>
                     <a>|</a>
@@ -49,7 +49,7 @@
                 </li>
             </ul>
         </div>
-    
+
     </header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light py-1">
         <div class="container">
@@ -67,7 +67,7 @@
             >
                 <span class="navbar-toggler-icon"></span>
             </button>
-    
+
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
@@ -89,7 +89,7 @@
                                 <a class="dropdown-item" style="text-transform: none" href={% url 'products:paper-tube-list' %}>
                                     Paper Tube
                                 </a>
-    
+
                                 <a class="dropdown-item" style="text-transform: none" href={% url 'products:plastic-pipe-list' %}> Plastic Pipe</a>
                                 <a class="dropdown-item" style="text-transform: none" href={% url 'products:metalic-pipe-list' %}>Metallic Pipe</a>
                             </div>
@@ -98,9 +98,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'pages:contact' %}">Contact Us</a>
                     </li>
-    
+
                 </ul>
-    
+
             </div>
         </div>
     </nav>
@@ -166,7 +166,7 @@
                         >{{ post.short_content|safe|striptags }}</span
                         >
                         <p class="thin">
-                            {{ post.description }}
+                            {{ post.description|safe|striptags }}
                         </p>
                         <a
                                 href="{{ post.get_upload_url }}"
@@ -211,7 +211,7 @@
                         </li>
                     </ul>
                 </div>
-                
+
 
                 <div class="col-12 col-md-5">
                     <div class="col-sm-6 col-md-8 col-lg-6  text-center mx-auto">
@@ -283,7 +283,7 @@
             </div>
         </div>
     </div>
-    
+
     <div class="bottom">
         <ul class="nav justify-content-center mb-0">
             <li class="nav-item">

@@ -42,7 +42,7 @@ class CustomerAdmin(admin.ModelAdmin):
     inlines = [OrderInline]
     readonly_fields = ['updated_time', 'created_time', ]
     fields = [
-        ('name', 'email'),
+        ('name', 'email','phone'),
         ('status', 'active'),
         'website',
         'logo',
