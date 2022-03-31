@@ -19,18 +19,18 @@ def index(request):
         email = request.POST['email']
         logo = request.POST['logo']
         phone = request.POST['phone']
-        customer,customer_  = Customer.objects.get_or_create(email = email, name = name, logo = logo, phone = phone)
+        customer,customer_  = Customer.objects.get_or_create(email = email, name = name, defaults={'logo': logo, 'phone': phone})
         material_type = request.POST['material']
-        material = Material.objects.get(title = material_type)
+        material,created = Material.objects.get_or_create(title = material_type)
         inner_diameter = request.POST['inner_diameter']
         thickness = request.POST['thickness']
         length = request.POST['length']
         quantity = request.POST['quantity']
-        order = Order.objects.create(customer=customer, material = material, 
-        inner_diameter = inner_diameter, thickness = thickness, length = length, 
+        order = Order.objects.create(customer=customer, material = material,
+        inner_diameter = inner_diameter, thickness = thickness, length = length,
         quantity=quantity)
 
-    
+
 
 
     return render(request, 'pages/index.html', {'home_feature': home_feature, 'materials':materials})
