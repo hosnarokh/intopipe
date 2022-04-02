@@ -147,34 +147,37 @@
 
 <main class="index">
          <!-- این اضافه است. یک توی سایت واسه ی اینه -->
-    <h2>{{ posts.count }}</h2>
-    
+    <!-- <h2>{{ posts.count }}</h2> -->
+
     <section class="pt-3 pb-5">
         <div class="container">
             {% for post in posts %}
                 <div class="row">
-                    <div class="col-lg-3 col-md-4 mb-4 mb-md-0">
-                        <a href="">
+                    <div class="col-md-12 px-md-3">
+                        <div class="">
+                            <a href=""><h2 class="bolder">{{ post.title }}</h2></a>
+                            <span class="c-card__subtitle text-justify"
+                            >{{ post.short_content|safe|striptags }}</span
+                            >
+                        </div>
+                    </div>
+
+                    <div class="d-flex col-md-12 mt-3 h-100">
+                        <p class="thin col-md-6 text-justify order-md-1 order-2">
+                            {{ post.description|safe|striptags }}
+                        </p>
+
+                        <a href="" class="col-md-6">
                             <img
-                                    class="img-fluid"
+                                    class="img-fluid h-md-100 h-50 w-100 rounded order-md-2 order-1 mb-3  mb-md-0"
                                     src="{{ post.post_image.url }}"
                                     alt=""
                             />
                         </a>
-                    </div>
-                    <div class="col-lg-9 col-md-8">
-                        <a href=""><h2 class="bolder">{{ post.title }}</h2></a>
-                        <span class="c-card__subtitle"
-                        >{{ post.short_content|safe|striptags }}</span
-                        >
-                        <p class="thin">
-                            {{ post.description|safe|striptags }}
-                        </p>
-                        <a
+                        <!-- <a
                                 href="{{ post.get_upload_url }}"
                                 class="btn btn-link"
-                        >{{ post.button_text }}</a
-                        >
+                        >{{ post.button_text }}</a> -->
                     </div>
                 </div>
                 <hr class="my-4"/>
@@ -195,7 +198,7 @@
                         </li>
 
                         <li class="nav-item col-4 pl-md-0">
-                            <a class="nav-link" href="{% url 'pages:about' %}">Our Story</a>
+                            <a class="nav-link" href="{% url 'posts:post_list' %}">Our Story</a>
                         </li>
 
                         <li class="nav-item col-4 pl-md-0">
