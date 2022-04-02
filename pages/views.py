@@ -20,8 +20,8 @@ def index(request):
         logo = request.POST['logo']
         phone = request.POST['phone']
         customer,customer_  = Customer.objects.get_or_create(email = email, name = name, defaults={'logo': logo, 'phone': phone})
-        material_type = request.POST['material']
-        material,created = Material.objects.get_or_create(title = material_type)
+        material_type_id = int(request.POST['material'])
+        material = Material.objects.get(id = material_type_id)
         inner_diameter = request.POST['inner_diameter']
         thickness = request.POST['thickness']
         length = request.POST['length']
