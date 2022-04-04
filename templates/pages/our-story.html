@@ -153,17 +153,17 @@
         <div class="container">
             {% for post in posts %}
                 <div class="row">
-                    <div class="px-lg-3">
+                    <div class="px-lg-3 px-2">
                         <div class="">
                             <a href=""><h2 class="bolder">{{ post.title }}</h2></a>
-                            <span class="c-card__subtitle text-justify"
-                            >{{ post.short_content|safe|striptags }}</span
+                            <p class="c-card__subtitle text-justify" style="line-height: 1.5em;"
+                            >{{ post.short_content|safe|striptags }}</p
                             >
                         </div>
                     </div>
 
                     <div class="d-flex flex-column flex-lg-row mt-3 h-100">
-                        <p class="thin col-lg-6 text-justify order-lg-1 order-2">
+                        <p class="thin col-lg-6 text-justify order-lg-1 order-2" style="font-size: 1rem !important;">
                             {{ post.description|safe|striptags }}
                         </p>
 
